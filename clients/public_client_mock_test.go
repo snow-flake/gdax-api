@@ -1,80 +1,42 @@
 package clients
 
 import (
-	"encoding/json"
-	"fmt"
-	"net/url"
-	"strings"
+	"gopkg.in/jarcoal/httpmock.v1"
+	"reflect"
 	"testing"
 	"time"
-	"reflect"
 )
-
-type mockGdaxPublicClient struct {
-	json string
-	err  error
-}
-
-func (client *mockGdaxPublicClient) Get(path string, params url.Values, target interface{}) error {
-	if client.err != nil {
-		return client.err
-	}
-	body := strings.NewReader(client.json)
-	return json.NewDecoder(body).Decode(target)
-}
-
-func Test_mockGdaxPublicClient_Get_Success(t *testing.T) {
-	type TestResponse struct {
-		Iso   time.Time `json:"iso"`
-		Epoch float64   `json:"epoch"`
-	}
-	client := &mockGdaxPublicClient{
-		json: "{ \"iso\": \"2015-01-07T23:47:25.201Z\", \"epoch\": 1420674445.201 }",
-		err:  nil,
-	}
-	output := &TestResponse{}
-	err := client.Get("/time", url.Values{}, output)
-	if nil != err {
-		t.Fatal("Expected error to be nil, %v", err)
-	}
-}
-
-func Test_mockGdaxPublicClient_Get_Error(t *testing.T) {
-	type TestResponse struct {
-		Iso   time.Time `json:"iso"`
-		Epoch float64   `json:"epoch"`
-	}
-	client := &mockGdaxPublicClient{
-		json: "",
-		err:  fmt.Errorf("Example error"),
-	}
-	output := &TestResponse{}
-	err := client.Get("/time", url.Values{}, output)
-	if client.err != err {
-		t.Fatal("Expected error to match inputs, %v", err)
-	}
-}
 
 //
 //
 //
 
 func Test_mock_GetProducts(t *testing.T) {
-	client := &mockGdaxPublicClient{
-		json: `
-			[
-				{
-					"id": "BTC-USD",
-					"base_currency": "BTC",
-					"quote_currency": "USD",
-					"base_min_size": "0.01",
-					"base_max_size": "10000.00",
-					"quote_increment": "0.01"
-				}
-			]
-		`,
-		err: nil,
-	}
+	// Setup the mocks
+	httpmock.Activate()
+	defer httpmock.DeactivateAndReset()
+	// Mock the time request
+	httpmock.RegisterResponder(
+		"GET",
+		"https://mock-api.gdax.com/products",
+		httpmock.NewStringResponder(
+			200,
+			`
+				[
+					{
+						"id": "BTC-USD",
+						"base_currency": "BTC",
+						"quote_currency": "USD",
+						"base_min_size": "0.01",
+						"base_max_size": "10000.00",
+						"quote_increment": "0.01"
+					}
+				]
+			`,
+		),
+	)
+
+	client := NewMockClient()
 	output, err := GetProducts(client)
 	if err != nil {
 		t.Fatalf("Error should be nil, %v", err)
@@ -111,17 +73,26 @@ func Test_mock_GetProducts(t *testing.T) {
 //
 
 func Test_mock_GetTime(t *testing.T) {
-	client := &mockGdaxPublicClient{
-		json: `
+	// Setup the mocks
+	httpmock.Activate()
+	defer httpmock.DeactivateAndReset()
+	// Mock the time request
+	httpmock.RegisterResponder(
+		"GET",
+		"https://mock-api.gdax.com/time",
+		httpmock.NewStringResponder(
+			200,
+			`
 			{
 				"iso": "2015-01-07T23:47:25.201Z",
 				"epoch": 1420674445.201
 			}
-		`,
-		err: nil,
-	}
+			`,
+		),
+	)
+	client := NewMockClient()
 	expected := &GdaxTimeResponse{
-		Iso: time.Date(2015, 01, 07, 23, 47, 25, 000000201, time.UTC),
+		Iso:   time.Date(2015, 01, 07, 23, 47, 25, 000000201, time.UTC),
 		Epoch: 1420674445.201,
 	}
 	output, err := GetTime(client)
@@ -141,19 +112,27 @@ func Test_mock_GetTime(t *testing.T) {
 //
 
 func Test_mock_GetCurrencies(t *testing.T) {
-	client := &mockGdaxPublicClient{
-		json: `
+	// Setup the mocks
+	httpmock.Activate()
+	defer httpmock.DeactivateAndReset()
+	// Mock the time request
+	httpmock.RegisterResponder(
+		"GET",
+		"https://mock-api.gdax.com/currencies",
+		httpmock.NewStringResponder(
+			200,
+			`
 			[
 				{ "id": "BTC", "name": "Bitcoin", "min_size": "0.00000001" },
 				{ "id": "USD", "name": "United States Dollar", "min_size": "0.01000000" }
 			]
-		`,
-		err: nil,
-	}
+			`,
+		),
+	)
+	client := NewMockClient()
 	expected := []GdaxCurrency{
-		GdaxCurrency{ ID: "BTC", Name: "Bitcoin", MinSize: 0.00000001},
-		GdaxCurrency{ ID: "USD", Name: "United States Dollar", MinSize: 0.01000000},
-
+		GdaxCurrency{ID: "BTC", Name: "Bitcoin", MinSize: 0.00000001},
+		GdaxCurrency{ID: "USD", Name: "United States Dollar", MinSize: 0.01000000},
 	}
 	output, err := GetCurrencies(client)
 	if err != nil {
@@ -165,10 +144,11 @@ func Test_mock_GetCurrencies(t *testing.T) {
 	if len(output) != 2 {
 		t.Fatalf("Output should have 1 item, %v", output)
 	}
-	for i, actual := range(output) {
-	if !reflect.DeepEqual(actual, expected[i]) {
-		t.Fatalf("Expected output %v to match expected %v", actual, expected[i])
-	}}
+	for i, actual := range output {
+		if !reflect.DeepEqual(actual, expected[i]) {
+			t.Fatalf("Expected output %v to match expected %v", actual, expected[i])
+		}
+	}
 }
 
 //
@@ -176,8 +156,16 @@ func Test_mock_GetCurrencies(t *testing.T) {
 //
 
 func Test_mock_GetProduct24HrStats(t *testing.T) {
-	client := &mockGdaxPublicClient{
-		json: `
+	// Setup the mocks
+	httpmock.Activate()
+	defer httpmock.DeactivateAndReset()
+	// Mock the time request
+	httpmock.RegisterResponder(
+		"GET",
+		"https://mock-api.gdax.com/products/BTC-USD/stats",
+		httpmock.NewStringResponder(
+			200,
+			`
 			{
 				"open":"2000.00000000",
 				"high":"2110.06000000",
@@ -186,17 +174,17 @@ func Test_mock_GetProduct24HrStats(t *testing.T) {
 				"last":"1893.91000000",
 				"volume_30day":"398368.6657624"
 			}
-		`,
-		err: nil,
-	}
+			`,
+		),
+	)
+	client := NewMockClient()
 	expected := &GdaxProduct24HrStatsResponse{
-		Open: 2000.00000000,
-		High: 2110.06000000,
-		Low: 1758.20000000,
-		Volume: 20465.01966891,
-		Last: 1893.91000000,
+		Open:        2000.00000000,
+		High:        2110.06000000,
+		Low:         1758.20000000,
+		Volume:      20465.01966891,
+		Last:        1893.91000000,
 		Volume30Day: 398368.6657624,
-
 	}
 	output, err := GetProduct24HrStats(client, "BTC-USD")
 	if err != nil {
@@ -215,15 +203,24 @@ func Test_mock_GetProduct24HrStats(t *testing.T) {
 //
 
 func Test_mock_GetProductHistoricRates(t *testing.T) {
-	client := &mockGdaxPublicClient{
-		json: `
+	// Setup the mocks
+	httpmock.Activate()
+	defer httpmock.DeactivateAndReset()
+	// Mock the time request
+	httpmock.RegisterResponder(
+		"GET",
+		"https://mock-api.gdax.com/products/BTC-USD/candles",
+		httpmock.NewStringResponder(
+			200,
+			`
 			[
 			  [1500130020,181.8,181.81,181.8,181.81,11.34496359],
 			  [1500130005,181.81,181.81,181.81,181.81,5.75798592]
 			]
-		`,
-		err: nil,
-	}
+			`,
+		),
+	)
+	client := NewMockClient()
 	start := time.Now().UTC().Add(-1 * HistoricRateGranularity_5m * time.Second)
 	end := time.Now().UTC()
 	output, err := GetProductHistoricRates(client, "BTC-USD", &start, &end, HistoricRateGranularity_5m)
@@ -262,8 +259,16 @@ func Test_mock_GetProductHistoricRates(t *testing.T) {
 //
 
 func Test_mock_GetProductTrades(t *testing.T) {
-	client := &mockGdaxPublicClient{
-		json: `
+	// Setup the mocks
+	httpmock.Activate()
+	defer httpmock.DeactivateAndReset()
+	// Mock the time request
+	httpmock.RegisterResponder(
+		"GET",
+		"https://mock-api.gdax.com/products/BTC-USD/trades",
+		httpmock.NewStringResponder(
+			200,
+			`
 			[{
 			    "time": "2014-11-07T22:19:28.578544Z",
 			    "trade_id": 74,
@@ -277,9 +282,10 @@ func Test_mock_GetProductTrades(t *testing.T) {
 			    "size": "0.01000000",
 			    "side": "sell"
 			}]
-		`,
-		err: nil,
-	}
+			`,
+		),
+	)
+	client := NewMockClient()
 	output, err := GetProductTrades(client, "BTC-USD")
 	if err != nil {
 		t.Fatalf("Error should be nil, %v", err)
@@ -314,8 +320,16 @@ func Test_mock_GetProductTrades(t *testing.T) {
 //
 
 func Test_mock_GetProductTicker(t *testing.T) {
-	client := &mockGdaxPublicClient{
-		json: `
+	// Setup the mocks
+	httpmock.Activate()
+	defer httpmock.DeactivateAndReset()
+	// Mock the time request
+	httpmock.RegisterResponder(
+		"GET",
+		"https://mock-api.gdax.com/products/BTC-USD/ticker",
+		httpmock.NewStringResponder(
+			200,
+			`
 			{
 			  "trade_id": 4729088,
 			  "price": "333.99",
@@ -325,17 +339,18 @@ func Test_mock_GetProductTicker(t *testing.T) {
 			  "volume": "5957.11914015",
 			  "time": "2015-11-14T20:46:03.511254Z"
 			}
-		`,
-		err: nil,
-	}
+			`,
+		),
+	)
+	client := NewMockClient()
 	expected := &GdaxProductTickerResponse{
 		TradeID: 4729088,
-		Price: 333.99,
-		Size: 0.193,
-		Bid: 333.98,
-		Ask: 333.99,
-		Volume: 5957.11914015,
-		Time: time.Date(2015,11,14,20,46,03,511254, time.UTC),
+		Price:   333.99,
+		Size:    0.193,
+		Bid:     333.98,
+		Ask:     333.99,
+		Volume:  5957.11914015,
+		Time:    time.Date(2015, 11, 14, 20, 46, 03, 511254, time.UTC),
 	}
 	output, err := GetProductTicker(client, "BTC-USD")
 	if err != nil {
@@ -373,16 +388,25 @@ func Test_mock_GetProductTicker(t *testing.T) {
 //
 
 func Test_mock_GetProductOrderBookLevel1(t *testing.T) {
-	client := &mockGdaxPublicClient{
-		json: `
+	// Setup the mocks
+	httpmock.Activate()
+	defer httpmock.DeactivateAndReset()
+	// Mock the time request
+	httpmock.RegisterResponder(
+		"GET",
+		"https://mock-api.gdax.com/products/BTC-USD/book",
+		httpmock.NewStringResponder(
+			200,
+			`
 			{
 				"sequence":775966773,
 				"bids":[["180.79","142.55091057",2]],
 				"asks":[["180.84","9.91691592",2]]
 			}
-		`,
-		err: nil,
-	}
+			`,
+		),
+	)
+	client := NewMockClient()
 	output, err := GetProductOrderBookLevel1(client, "BTC-USD")
 	if err != nil {
 		t.Fatalf("Error should be nil, %v", err)
@@ -414,8 +438,16 @@ func Test_mock_GetProductOrderBookLevel1(t *testing.T) {
 }
 
 func Test_mock_GetProductOrderBookLevel2(t *testing.T) {
-	client := &mockGdaxPublicClient{
-		json: `
+	// Setup the mocks
+	httpmock.Activate()
+	defer httpmock.DeactivateAndReset()
+	// Mock the time request
+	httpmock.RegisterResponder(
+		"GET",
+		"https://mock-api.gdax.com/products/BTC-USD/book",
+		httpmock.NewStringResponder(
+			200,
+			`
 			{
 				"sequence":776000158,
 				"bids":[
@@ -522,9 +554,10 @@ func Test_mock_GetProductOrderBookLevel2(t *testing.T) {
 					["180.89","0.1",1]
 				]
 			}
-		`,
-		err: nil,
-	}
+			`,
+		),
+	)
+	client := NewMockClient()
 	output, err := GetProductOrderBookLevel2(client, "BTC-USD")
 	if err != nil {
 		t.Fatalf("Error should be nil, %v", err)
@@ -562,8 +595,16 @@ func Test_mock_GetProductOrderBookLevel2(t *testing.T) {
 }
 
 func Test_mock_GetProductOrderBookLevel3(t *testing.T) {
-	client := &mockGdaxPublicClient{
-		json: `
+	// Setup the mocks
+	httpmock.Activate()
+	defer httpmock.DeactivateAndReset()
+	// Mock the time request
+	httpmock.RegisterResponder(
+		"GET",
+		"https://mock-api.gdax.com/products/BTC-USD/book",
+		httpmock.NewStringResponder(
+			200,
+			`
 			{
 				"sequence":776035515,
 				"bids":[
@@ -577,9 +618,10 @@ func Test_mock_GetProductOrderBookLevel3(t *testing.T) {
 					["179.38","0.25","b9f8e2e2-4bc5-4ff5-a024-f6b737ad19e7"]
 				]
 			}
-		`,
-		err: nil,
-	}
+			`,
+		),
+	)
+	client := NewMockClient()
 	output, err := GetProductOrderBookLevel3(client, "BTC-USD")
 	if err != nil {
 		t.Fatalf("Error should be nil, %v", err)
