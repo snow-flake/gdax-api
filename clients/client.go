@@ -10,6 +10,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"net/url"
+	"os"
 	"strconv"
 	"strings"
 	"time"
@@ -45,7 +46,10 @@ func (e ClientError) Error() string {
 	return e.Message
 }
 
-func NewProductionClient(secret, key, passphrase string) *Client {
+func NewProductionClient() *Client {
+	passphrase := os.Getenv("GDAX_PRODUCTION_PASSPHRASE")
+	secret := os.Getenv("GDAX_PRODUCTION_SECRET")
+	key := os.Getenv("GDAX_PRODUCTION_KEY")
 	return &Client{
 		URL:        "https://api.gdax.com",
 		Secret:     secret,
@@ -54,7 +58,10 @@ func NewProductionClient(secret, key, passphrase string) *Client {
 	}
 }
 
-func NewSandboxClient(secret, key, passphrase string) *Client {
+func NewSandboxClient() *Client {
+	passphrase := os.Getenv("GDAX_SANDBOX_PASSPHRASE")
+	secret := os.Getenv("GDAX_SANDBOX_SECRET")
+	key := os.Getenv("GDAX_SANDBOX_KEY")
 	return &Client{
 		URL:        "https://api-public.sandbox.gdax.com",
 		Secret:     secret,

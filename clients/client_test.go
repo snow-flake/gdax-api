@@ -172,7 +172,7 @@ func Test_Client_generateMessageSignature(t *testing.T) {
 }
 
 func Test_Client_generateMessageSignature_isBlank(t *testing.T) {
-	client := NewSandboxClient("", "", "")
+	client := &Client{}
 	timestamp := "2014-11-06T10:34:47.123456Z"
 	method := "GET"
 	partial_url := "/time?test=params"
@@ -192,7 +192,7 @@ func Test_Client_decodeError(t *testing.T) {
 			"message": "Invalid Price"
 		}
 	`)
-	client := NewSandboxClient("", "", "")
+	client := &Client{}
 	err := client.decodeError(body_data)
 	if nil == err {
 		t.Fatalf("Expected to return error, actual = %v", err)
