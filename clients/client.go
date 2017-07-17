@@ -8,7 +8,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	"log"
 	"net/http"
 	"net/url"
 	"strconv"
@@ -156,12 +155,6 @@ func (c *Client) request(method string, pathname string, url_params url.Values, 
 	if nil != err {
 		return res, err
 	}
-
-	log.Printf("Request URL: %v", partial_url)
-	log.Printf("Request Body: %v", string(body_data))
-	log.Printf("Response Status: %v", res.StatusCode)
-	log.Printf("Response Body: %v", string(body_data))
-
 	// If the status code is !== 200 then bail now
 	if res.StatusCode != 200 {
 		return res, c.decodeError(body_data)
