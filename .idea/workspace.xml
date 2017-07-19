@@ -7,12 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24fc4138-fdb4-465a-b82a-8e75ceed5fe0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/clients/private_client_test.go" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clients/client.go" afterPath="$PROJECT_DIR$/clients/client.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clients/client_test.go" afterPath="$PROJECT_DIR$/clients/client_test.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clients/private_client.go" afterPath="$PROJECT_DIR$/clients/private_client.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clients/public_client_live_test.go" afterPath="$PROJECT_DIR$/clients/public_client_live_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.go" afterPath="$PROJECT_DIR$/main.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,26 +24,135 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="private_client_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clients/private_client_test.go">
+      <file leaf-file-name="private_client.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clients/private_client.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="416">
+              <caret line="62" column="5" lean-forward="false" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
               <folding>
-                <element signature="e#17#89#0" expanded="true" />
+                <element signature="e#17#53#0" expanded="true" />
+                <element signature="e#1984#2194#0" expanded="false" />
+                <element signature="e#2255#2807#0" expanded="false" />
+                <element signature="n#!!block;n#GetAccountTrailingVolume#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="private_client.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/clients/private_client.go">
+      <file leaf-file-name="private_client_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clients/private_client_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+            <state relative-caret-position="143">
+              <caret line="51" column="5" lean-forward="false" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
               <folding>
-                <element signature="e#17#46#0" expanded="true" />
+                <element signature="e#17#89#0" expanded="true" />
+                <element signature="n#!!block;n#Test_mock_GetAccountTrailingVolume#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="61" lean-forward="false" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+              <folding>
+                <element signature="e#14#60#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="public_client.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clients/public_client.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="279" column="65" lean-forward="true" selection-start-line="279" selection-start-column="34" selection-end-line="279" selection-end-column="65" />
+              <folding>
+                <element signature="e#114#392#0" expanded="false" />
+                <element signature="n#!!block;n#GetProducts#0" expanded="false" />
+                <element signature="e#1365#1437#0" expanded="false" />
+                <element signature="n#!!block;n#GetTime#0" expanded="false" />
+                <element signature="e#1881#1986#0" expanded="false" />
+                <element signature="n#!!block;n#GetCurrencies#0" expanded="false" />
+                <element signature="e#2976#3198#0" expanded="false" />
+                <element signature="e#3049#3086#0" expanded="false" />
+                <element signature="e#3125#3194#0" expanded="false" />
+                <element signature="e#3266#3499#0" expanded="false" />
+                <element signature="n#!!block;n#GetProduct24HrStats#0" expanded="false" />
+                <element signature="e#4397#4419#0" expanded="false" />
+                <element signature="e#4482#4504#0" expanded="false" />
+                <element signature="e#4565#4587#0" expanded="false" />
+                <element signature="e#4654#4676#0" expanded="false" />
+                <element signature="e#4739#4761#0" expanded="false" />
+                <element signature="e#4864#4886#0" expanded="false" />
+                <element signature="e#4927#5066#0" expanded="false" />
+                <element signature="e#5129#5313#0" expanded="false" />
+                <element signature="e#7017#7086#0" expanded="false" />
+                <element signature="e#7359#7747#0" expanded="false" />
+                <element signature="e#7582#7712#0" expanded="false" />
+                <element signature="e#7803#7983#0" expanded="false" />
+                <element signature="n#!!block;n#GetProductTrades#0" expanded="false" />
+                <element signature="e#9267#9640#0" expanded="false" />
+                <element signature="e#9335#9376#0" expanded="false" />
+                <element signature="e#9441#9482#0" expanded="false" />
+                <element signature="e#9525#9636#0" expanded="false" />
+                <element signature="e#9706#9952#0" expanded="false" />
+                <element signature="n#!!block;n#GetProductTicker#0" expanded="false" />
+                <element signature="e#11030#11159#0" expanded="false" />
+                <element signature="e#11243#11265#0" expanded="false" />
+                <element signature="e#11271#11298#0" expanded="false" />
+                <element signature="e#11379#11401#0" expanded="false" />
+                <element signature="e#11407#11432#0" expanded="false" />
+                <element signature="e#11510#11532#0" expanded="false" />
+                <element signature="e#11538#11561#0" expanded="false" />
+                <element signature="e#11639#11661#0" expanded="false" />
+                <element signature="e#11667#11690#0" expanded="false" />
+                <element signature="e#11777#11799#0" expanded="false" />
+                <element signature="e#11805#11834#0" expanded="false" />
+                <element signature="e#11908#11973#0" expanded="false" />
+                <element signature="e#12017#12077#0" expanded="false" />
+                <element signature="e#12118#12234#0" expanded="false" />
+                <element signature="e#12275#12395#0" expanded="false" />
+                <element signature="e#12436#12562#0" expanded="false" />
+                <element signature="n#!!block;n#GetProductOrderBookLevel1#0" expanded="false" />
+                <element signature="e#12855#12877#0" expanded="false" />
+                <element signature="e#13092#13228#0" expanded="false" />
+                <element signature="e#13177#13201#0" expanded="false" />
+                <element signature="e#13247#13383#0" expanded="false" />
+                <element signature="e#13332#13356#0" expanded="false" />
+                <element signature="n#!!block;n#GetProductOrderBookLevel2#0" expanded="false" />
+                <element signature="e#13852#14018#0" expanded="false" />
+                <element signature="e#14046#14194#0" expanded="false" />
+                <element signature="e#14124#14148#0" expanded="false" />
+                <element signature="e#14221#14369#0" expanded="false" />
+                <element signature="e#14299#14323#0" expanded="false" />
+                <element signature="n#!!block;n#GetProductOrderBookLevel3#0" expanded="false" />
+                <element signature="e#14837#15009#0" expanded="false" />
+                <element signature="e#15037#15188#0" expanded="false" />
+                <element signature="e#15118#15142#0" expanded="false" />
+                <element signature="e#15215#15366#0" expanded="false" />
+                <element signature="e#15296#15320#0" expanded="false" />
+                <element signature="n#!!block;n#parseGdaxProductOrderBookItemAggregated#0" expanded="false" />
+                <element signature="e#15631#15653#0" expanded="false" />
+                <element signature="e#15747#15769#0" expanded="false" />
+                <element signature="e#15884#15970#0" expanded="false" />
+                <element signature="n#!!block;n#parseGdaxProductOrderBookItemNonAggregated#0" expanded="false" />
+                <element signature="e#16226#16248#0" expanded="false" />
+                <element signature="e#16342#16364#0" expanded="false" />
+                <element signature="e#16440#16513#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="public_client_mock_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clients/public_client_mock_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="146">
+              <caret line="223" column="0" lean-forward="false" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,9 +169,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>generateSig</find>
-      <find>message</find>
-      <find>formatUrl</find>
       <find>encoded_body</find>
       <find>encoded_data</find>
       <find>partialURL</find>
@@ -94,6 +196,9 @@
       <find>ProductID</find>
       <find>client.Get</find>
       <find>Test_mock_GetProducts</find>
+      <find>GetProductHistoricRates</find>
+      <find>&quot;2006-01-02T15:04:05Z&quot;</find>
+      <find>start</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -102,7 +207,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/main.go" />
         <option value="$PROJECT_DIR$/public_client.go" />
         <option value="$PROJECT_DIR$/clients/test_public_client.go" />
         <option value="$PROJECT_DIR$/clients/public_client_test.go" />
@@ -115,6 +219,7 @@
         <option value="$PROJECT_DIR$/clients/public_client_live_test.go" />
         <option value="$PROJECT_DIR$/clients/private_client.go" />
         <option value="$PROJECT_DIR$/clients/private_client_test.go" />
+        <option value="$PROJECT_DIR$/main.go" />
       </list>
     </option>
   </component>
@@ -147,6 +252,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -176,7 +282,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -316,46 +421,44 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_'clients' - 2017.07.17 at 18h 36m 20s.xml">
+    <history-entry file="All_in_'clients' - 2017.07.19 at 06h 20m 20s.xml">
       <configuration name="All in 'clients'" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="All_in_'clients' - 2017.07.17 at 18h 36m 46s.xml">
+    <history-entry file="All_in_'clients' - 2017.07.19 at 06h 20m 54s.xml">
       <configuration name="All in 'clients'" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="All_in_'clients' - 2017.07.17 at 18h 37m 01s.xml">
+    <history-entry file="All_in_'clients' - 2017.07.19 at 06h 21m 01s.xml">
       <configuration name="All in 'clients'" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="All_in_'clients' - 2017.07.17 at 18h 37m 11s.xml">
+    <history-entry file="All_in_'clients' - 2017.07.19 at 06h 21m 17s.xml">
       <configuration name="All in 'clients'" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="All_in_'clients' - 2017.07.17 at 18h 38m 07s.xml">
+    <history-entry file="All_in_'clients' - 2017.07.19 at 06h 21m 33s.xml">
       <configuration name="All in 'clients'" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="All_in_'clients' - 2017.07.17 at 18h 58m 00s.xml">
+    <history-entry file="All_in_'clients' - 2017.07.19 at 06h 21m 45s.xml">
       <configuration name="All in 'clients'" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="All_in_'clients' - 2017.07.17 at 18h 58m 12s.xml">
+    <history-entry file="All_in_'clients' - 2017.07.19 at 06h 22m 21s.xml">
       <configuration name="All in 'clients'" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="All_in_'clients' - 2017.07.17 at 18h 58m 58s.xml">
+    <history-entry file="All_in_'clients' - 2017.07.19 at 06h 22m 28s.xml">
       <configuration name="All in 'clients'" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="All_in_'clients' - 2017.07.17 at 18h 59m 50s.xml">
+    <history-entry file="All_in_'clients' - 2017.07.19 at 06h 22m 44s.xml">
       <configuration name="All in 'clients'" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="All_in_'clients' - 2017.07.17 at 19h 02m 00s.xml">
+    <history-entry file="All_in_'clients' - 2017.07.19 at 06h 23m 18s.xml">
       <configuration name="All in 'clients'" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="798" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -363,12 +466,23 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -407,9 +521,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#17#89#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -433,13 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1339">
           <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -479,7 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
           <caret line="366" column="5" lean-forward="false" selection-start-line="366" selection-start-column="5" selection-end-line="366" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -497,14 +601,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clients/logger.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/clients/logger.go" />
     <entry file="file://$PROJECT_DIR$/clients/public_client_live_test.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
@@ -640,22 +737,296 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/clients/private_client.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="62" column="5" lean-forward="false" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+          <folding>
+            <element signature="e#17#53#0" expanded="true" />
+            <element signature="e#1984#2194#0" expanded="false" />
+            <element signature="e#2255#2807#0" expanded="false" />
+            <element signature="n#!!block;n#GetAccountTrailingVolume#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backtest.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/clients/private_client_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="143">
+          <caret line="51" column="5" lean-forward="false" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
           <folding>
             <element signature="e#17#89#0" expanded="true" />
+            <element signature="n#!!block;n#Test_mock_GetAccountTrailingVolume#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/gopkg.in/urfave/cli.v2/cli-v1-to-v2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+          <folding>
+            <element signature="e#14#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clients/public_client_mock_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clients/public_client_mock.go" />
+    <entry file="file:///usr/local/Cellar/go/1.9beta2/libexec/src/time/format.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7125">
+          <caret line="475" column="14" lean-forward="false" selection-start-line="475" selection-start-column="14" selection-end-line="475" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.9beta2/libexec/src/time/time.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9375">
+          <caret line="625" column="0" lean-forward="true" selection-start-line="625" selection-start-column="0" selection-end-line="625" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.9beta2/libexec/src/strings/reader.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1339">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.9beta2/libexec/src/time/zoneinfo.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-343">
+          <caret line="58" column="4" lean-forward="false" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.9beta2/libexec/src/encoding/json/decode.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="831">
+          <caret line="192" column="0" lean-forward="true" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.9beta2/libexec/src/time/format.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="475" column="14" lean-forward="false" selection-start-line="475" selection-start-column="14" selection-end-line="475" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.9beta2/libexec/src/time/time.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="625" column="0" lean-forward="false" selection-start-line="625" selection-start-column="0" selection-end-line="625" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clients/public_client_mock.go" />
+    <entry file="file://$PROJECT_DIR$/client.go" />
+    <entry file="file:///usr/local/Cellar/go/1.9beta2/libexec/src/net/http/client.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="366" column="5" lean-forward="false" selection-start-line="366" selection-start-column="5" selection-end-line="366" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.9beta2/libexec/src/io/io.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.9beta2/libexec/src/bytes/reader.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1639">
+          <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clients/logger.go" />
+    <entry file="file://$PROJECT_DIR$/clients/public_client_live_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#17#57#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clients/client_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="174" column="23" lean-forward="false" selection-start-line="174" selection-start-column="23" selection-end-line="174" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clients/client.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="84" column="17" lean-forward="false" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
+          <folding>
+            <element signature="e#17#183#0" expanded="true" />
+            <element signature="n#!!block;n#formatUrl#0" expanded="false" />
+            <element signature="n#!!block;n#encodeBody#0" expanded="false" />
+            <element signature="n#!!block;n#generateMessageSignature#0" expanded="false" />
+            <element signature="n#!!block;n#decodeError#0" expanded="false" />
+            <marker date="1500330959000" expanded="false" signature="2360:3379" ph="/*...*/" />
+            <marker date="1500330959000" expanded="false" signature="5146:5187" ph="/*...*/" />
+            <marker date="1500330959000" expanded="false" signature="5413:5460" ph="/*...*/" />
+            <marker date="1500330959000" expanded="false" signature="5775:6275" ph="/*...*/" />
+            <marker date="1500330959000" expanded="false" signature="6957:6989" ph="/*...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clients/private_client_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="51" column="5" lean-forward="false" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+          <folding>
+            <element signature="e#17#89#0" expanded="true" />
+            <element signature="n#!!block;n#Test_mock_GetAccountTrailingVolume#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/clients/private_client.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        <state relative-caret-position="416">
+          <caret line="62" column="5" lean-forward="false" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
           <folding>
-            <element signature="e#17#46#0" expanded="true" />
+            <element signature="e#17#53#0" expanded="true" />
+            <element signature="e#1984#2194#0" expanded="false" />
+            <element signature="e#2255#2807#0" expanded="false" />
+            <element signature="n#!!block;n#GetAccountTrailingVolume#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clients/public_client_mock_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="223" column="0" lean-forward="false" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clients/public_client.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="279" column="65" lean-forward="true" selection-start-line="279" selection-start-column="34" selection-end-line="279" selection-end-column="65" />
+          <folding>
+            <element signature="e#114#392#0" expanded="false" />
+            <element signature="n#!!block;n#GetProducts#0" expanded="false" />
+            <element signature="e#1365#1437#0" expanded="false" />
+            <element signature="n#!!block;n#GetTime#0" expanded="false" />
+            <element signature="e#1881#1986#0" expanded="false" />
+            <element signature="n#!!block;n#GetCurrencies#0" expanded="false" />
+            <element signature="e#2976#3198#0" expanded="false" />
+            <element signature="e#3049#3086#0" expanded="false" />
+            <element signature="e#3125#3194#0" expanded="false" />
+            <element signature="e#3266#3499#0" expanded="false" />
+            <element signature="n#!!block;n#GetProduct24HrStats#0" expanded="false" />
+            <element signature="e#4397#4419#0" expanded="false" />
+            <element signature="e#4482#4504#0" expanded="false" />
+            <element signature="e#4565#4587#0" expanded="false" />
+            <element signature="e#4654#4676#0" expanded="false" />
+            <element signature="e#4739#4761#0" expanded="false" />
+            <element signature="e#4864#4886#0" expanded="false" />
+            <element signature="e#4927#5066#0" expanded="false" />
+            <element signature="e#5129#5313#0" expanded="false" />
+            <element signature="e#7017#7086#0" expanded="false" />
+            <element signature="e#7359#7747#0" expanded="false" />
+            <element signature="e#7582#7712#0" expanded="false" />
+            <element signature="e#7803#7983#0" expanded="false" />
+            <element signature="n#!!block;n#GetProductTrades#0" expanded="false" />
+            <element signature="e#9267#9640#0" expanded="false" />
+            <element signature="e#9335#9376#0" expanded="false" />
+            <element signature="e#9441#9482#0" expanded="false" />
+            <element signature="e#9525#9636#0" expanded="false" />
+            <element signature="e#9706#9952#0" expanded="false" />
+            <element signature="n#!!block;n#GetProductTicker#0" expanded="false" />
+            <element signature="e#11030#11159#0" expanded="false" />
+            <element signature="e#11243#11265#0" expanded="false" />
+            <element signature="e#11271#11298#0" expanded="false" />
+            <element signature="e#11379#11401#0" expanded="false" />
+            <element signature="e#11407#11432#0" expanded="false" />
+            <element signature="e#11510#11532#0" expanded="false" />
+            <element signature="e#11538#11561#0" expanded="false" />
+            <element signature="e#11639#11661#0" expanded="false" />
+            <element signature="e#11667#11690#0" expanded="false" />
+            <element signature="e#11777#11799#0" expanded="false" />
+            <element signature="e#11805#11834#0" expanded="false" />
+            <element signature="e#11908#11973#0" expanded="false" />
+            <element signature="e#12017#12077#0" expanded="false" />
+            <element signature="e#12118#12234#0" expanded="false" />
+            <element signature="e#12275#12395#0" expanded="false" />
+            <element signature="e#12436#12562#0" expanded="false" />
+            <element signature="n#!!block;n#GetProductOrderBookLevel1#0" expanded="false" />
+            <element signature="e#12855#12877#0" expanded="false" />
+            <element signature="e#13092#13228#0" expanded="false" />
+            <element signature="e#13177#13201#0" expanded="false" />
+            <element signature="e#13247#13383#0" expanded="false" />
+            <element signature="e#13332#13356#0" expanded="false" />
+            <element signature="n#!!block;n#GetProductOrderBookLevel2#0" expanded="false" />
+            <element signature="e#13852#14018#0" expanded="false" />
+            <element signature="e#14046#14194#0" expanded="false" />
+            <element signature="e#14124#14148#0" expanded="false" />
+            <element signature="e#14221#14369#0" expanded="false" />
+            <element signature="e#14299#14323#0" expanded="false" />
+            <element signature="n#!!block;n#GetProductOrderBookLevel3#0" expanded="false" />
+            <element signature="e#14837#15009#0" expanded="false" />
+            <element signature="e#15037#15188#0" expanded="false" />
+            <element signature="e#15118#15142#0" expanded="false" />
+            <element signature="e#15215#15366#0" expanded="false" />
+            <element signature="e#15296#15320#0" expanded="false" />
+            <element signature="n#!!block;n#parseGdaxProductOrderBookItemAggregated#0" expanded="false" />
+            <element signature="e#15631#15653#0" expanded="false" />
+            <element signature="e#15747#15769#0" expanded="false" />
+            <element signature="e#15884#15970#0" expanded="false" />
+            <element signature="n#!!block;n#parseGdaxProductOrderBookItemNonAggregated#0" expanded="false" />
+            <element signature="e#16226#16248#0" expanded="false" />
+            <element signature="e#16342#16364#0" expanded="false" />
+            <element signature="e#16440#16513#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="61" lean-forward="false" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+          <folding>
+            <element signature="e#14#60#0" expanded="true" />
           </folding>
         </state>
       </provider>
